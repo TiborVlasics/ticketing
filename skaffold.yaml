@@ -11,7 +11,7 @@ build:
   #   projectId: ticketing-dev-461813
   artifacts:
     - image: tibek/ticketing-auth
-    # - image: us.gcr.io/ticketing-dev-461813/auth
+      # - image: us.gcr.io/ticketing-dev-461813/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -19,5 +19,11 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-
-          
+    - image: tibek/ticketing-client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.tsx'
+            dest: .
