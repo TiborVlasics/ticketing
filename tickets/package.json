@@ -1,10 +1,11 @@
 {
-  "name": "auth",
+  "name": "tickets",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "dev": "tsc --watch & node --watch dist/index.js",
+    "build": "tsc",
     "start": "tsc --watch & node --watch dist/index.js",
     "test": "jest --watchAll --no-cache"
   },

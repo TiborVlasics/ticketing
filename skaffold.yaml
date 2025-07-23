@@ -27,3 +27,11 @@ build:
         manual:
           - src: 'src/**/*.tsx'
             dest: .
+    - image: tibek/ticketing-tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
